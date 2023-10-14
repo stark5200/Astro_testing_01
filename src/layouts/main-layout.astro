@@ -1,0 +1,22 @@
+---  
+import Nav from "../components/Nav";
+const { title } = Astro.props
+console.log(title)
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Personal Portfolio Belongong to Ammar Taha" />
+    <title>Ammar Taha Portfolio</title>
+    <meta title={title} />
+</head>
+  <body>
+    <main>
+      <slot /> 
+      <!-- the different pages to be rendered -->
+    </main>    
+  </body>
+</html>
