@@ -5,7 +5,7 @@ import { useMediaQuery } from "../utils/useMediaQuery"
 
 export default function Nav(){
   const [toggled, setToggled] = useState(false)
-  const matches = useMediaQuery('(min-width: 128px)')
+  const matches = useMediaQuery('(min-width: 1280px)')
   console.log(matches)
 
   return(
@@ -25,18 +25,21 @@ export default function Nav(){
       </div>
 
       {/* Title */}
+
       <h1 className="text-lg font-bold">
         <a href="/">Stark.</a>
       </h1>
 
-      <div 
-        onClick={() => setToggled((prevToggle) => !prevToggle)} 
-        className="space-y-1 cursor-pointer xl:hidden"
-      >
-        <span className="block h-0.5 w-8 bg-black"></span>
-        <span className="block h-0.5 w-5 bg-black"></span>
-        <span className="block h-0.5 w-5 bg-black"></span>
-      </div>
+      {!matches && (
+        <div 
+          onClick={() => setToggled((prevToggle) => !prevToggle)} 
+          className="space-y-1 cursor-pointer"
+        >
+          <span className="block h-0.5 w-8 bg-black"></span>
+          <span className="block h-0.5 w-5 bg-black"></span>
+          <span className="block h-0.5 w-5 bg-black"></span>
+        </div>
+      )}
     </nav>
   )
 }  
