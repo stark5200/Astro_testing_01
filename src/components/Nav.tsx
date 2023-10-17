@@ -49,6 +49,7 @@ export default function Nav(){
       </h1>
 
       {/* Check if we are on mobile or not */}
+      {/* google matches meaning */}
       {matches && (
         <div className="flex gap-12">
           <motion.a variants={itemMotion} href="/">Home</motion.a>
