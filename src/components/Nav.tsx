@@ -69,6 +69,8 @@ export default function Nav(){
         </div>
       )}
 
+      {/* Fixed nav*/}
+
       {toggled && !matches && (
         <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 25 }} className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center">
           <motion.div variants={navMotion} animate="visible" initial="hidden" className="flex flex-col gap-24 text-lg">
