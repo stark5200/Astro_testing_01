@@ -1,4 +1,4 @@
-import stark from "../../public/images/stark1024.jpg"
+import stark1024 from "../../public/stark1024.jpg"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { useMediaQuery } from "../utils/useMediaQuery"
@@ -39,7 +39,7 @@ export default function Nav(){
         <path d="M2 2L428 2" stroke="#282828" strokeWidth={2} strokeLinecap="round"/>
       </svg>
       <div>
-        <img src="../../public/images/stark.jpg" alt="Profile picture of me" width={96} height="auto" className="rounded-full"/>
+        <img src="../../public/stark1024.jpg" alt="Profile picture of me" width={96} height="auto" className="rounded-full"/>
       </div>
 
       {/* Title */}

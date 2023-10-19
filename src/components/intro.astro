@@ -1,6 +1,6 @@
 ---
-import f1 from "f1.jpg"
-import f2 from "f2.jpg"
+import f1 from "../../public/f1.jpg"
+import f2 from "../../public/f2.jpg"
 ---
 
 <div class="relative mx-12 flex flex-col items-center justify-center">
@@ -9,12 +9,12 @@ import f2 from "f2.jpg"
   </h1>
   <div class="relative">
 
-    <svg width="540" height="255" viewBox="0 0 540 255" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute h-full w-full overflow-visible">
-      <path d="M538 253.5V167H2L2 2" stroke="url(#paint0_linear_6_33)" stroke-width="3" stroke-linecap="round"></path>
+    <svg class="absolute h-full w-full overflow-visible" width="540" height="255" viewBox="0 0 540 255" fill="none" xmlns="http://www.w3.org/2000/svg" >
+      <path id="border-path" d="M538 253.5V167H2L2 2" stroke="url(#paint0_linear_6_33)" stroke-width="3" stroke-linecap="round"></path>
       <defs>
-        <linearGradient id="#paint0_linear_6_33" x1="2.00009" y1="50.9998" x2="589" y2="275.5" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#DC3A2B"></stop>
-          <stop offset="1" stop-color="#E18510"></stop>
+        <linearGradient id="#paint0_linear_6_33" x1="0%" y1="0%" x2="589" y2="275.5" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" style={{ stopColor: "#DC3A2B" }} ></stop>
+          <stop offset="100%" style={{ stopColor: "#E18510" }} ></stop>
         </linearGradient>
       </defs>  
     </svg>
@@ -33,4 +33,42 @@ import f2 from "f2.jpg"
       KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
     </p>
   </div>
+
+  <div class="flex justify-center pt-12 text-center mb-12 xl:gap-16">
+    <div class="w-32">
+      <h2>Art Posts</h2>
+      <p class="text-xl font-bold">85</p>
+    </div>
+    <div class="w-32">
+      <h2>Total Views</h2>
+      <p class="text-xl font-bold">1.3k</p>
+    </div>
+    <div class="w-32">
+      <h2>Bought</h2>
+      <p class="text-xl font-bold">36</p>
+    </div>
+  </div>
+
+  <div class="relative">
+    <img class="h-full" src=f1 alt="First Image">
+    <div class="absolute bottom-0 right-0 translate-y-1/4">
+      <img src="../../public/f2.jpg" alt="Second Image">
+    </div>
+  </div>
 </div>
+
+<div class="mt-12 h-4 w-full bg-black"></div>
+
+<script>
+  function updatePath(){
+    const textMain = document.querySelector('#anim-p') as HTMLElement
+    const path = document.querySelector('#border-path') as SVGPathElement
+
+    if(textMain && path){
+      path.setAttribute('d', `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${textMain.offsetHeight / 2}`)
+    }
+  } 
+
+  window.addEventListener('DOMContentLoaded', updatePath)
+  window.addEventListener('resize', updatePath)
+</script>
