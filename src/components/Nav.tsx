@@ -31,20 +31,20 @@ export default function Nav(){
       <svg 
         className="absolute bottom-0 left-1/2 -translate-x-1/2"
         width="250"
-        height={4}
+        height={5}
         viewBox="0 0 250 4"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M2 2L428 2" stroke="#282828" strokeWidth={2} strokeLinecap="round"/>
+        <path d="M2 2L428 2" stroke="#282828" strokeWidth={3} strokeLinecap="round"/>
       </svg>
       <div>
-        <img src={stark1024.src} alt="Profile picture of me" width={96} height="auto" className="rounded-full"/>
+        <img src={stark1024.src} alt="Profile picture of me" className="object-cover h-36 w-36 rounded-full"/>
       </div>
 
       {/* Title */}
 
-      <h1 className="text-lg font-bold">
+      <h1 className="text-lg font-bold flex justify-center text-center">
         <a href="/">Stark.</a>
       </h1>
 
@@ -61,7 +61,7 @@ export default function Nav(){
       {!matches && (
         <div 
           onClick={() => setToggled((prevToggle) => !prevToggle)} 
-          className="space-y-1.5 cursor-pointer z-10"
+          className="space-y-1.5 cursor-pointer z-30"
         >
           <motion.span animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }} className="block h-0.5 w-8 bg-black"></motion.span>
           <motion.span animate={{ width: toggled ? 0 : 24}} className="block h-0.5 w-5 bg-black"></motion.span>

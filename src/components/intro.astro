@@ -1,16 +1,15 @@
 ---
-import f10 from "/f10.jpg"
-import f11 from "/f11.jpg"
+import f10 from "../../public/f10.jpeg"
 ---
 
 <div class="relative mx-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36">
-  <div class="w-full xl:w-1/2">
+  <div class="w-full xl:w-1/2 justify-center text-center">
 
     <h1 class="text-xl">
       Enter my Beautiful website <span class="font-bold"> Please Hire me</span>
     </h1>
 
-    <div class="relative">
+    <div class="relative ">
       <svg class="absolute h-full w-full overflow-visible" width="540" height="255" viewBox="0 0 540 255" fill="none" xmlns="http://www.w3.org/2000/svg" >
         <path id="border-path" d="M538 253.5V167H2L2 2" stroke="url(#paint0_linear_6_33)" stroke-width="3" stroke-linecap="round"></path>
         <defs>
@@ -50,10 +49,7 @@ import f11 from "/f11.jpg"
 
   </div>
   <div class="relative">
-    <img class="h-full" src={f10.src} alt="First Image">
-    <div class="absolute bottom-0 right-0 translate-y-1/4">
-      <img src={f11.src} alt="Second Image">
-    </div>
+    <img class="h-full rounded-lg" width="420" src={f10.src} alt="First Image">
   </div>
 </div>
 
