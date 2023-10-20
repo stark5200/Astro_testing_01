@@ -1,0 +1,28 @@
+---
+import f1 from "/f1.jpg"
+import f2 from "/f2.jpg"
+import f3 from "/f3.jpg"
+import f4 from "/f4.jpg"
+---
+
+<div class="mx-12">
+  <h1 class="my-24 text-center text-xl">Latest Art Pieces</h1>
+  <div class="grid grid-cols-1 gap-24 xl:mx-48  xl:grid-cols-2">
+    <div class="relative group">
+      <img class="relative w-full z-10 rounded-lg transition-all group-hover:-translate-x-3" src={f1.src} alt="First Painting">
+      <div class="absolute left-0 top-0 w-full h-full bg-black group-hover:-translate-x-4"  ></div>
+    </div>
+    <div class="relative group">
+      <img class="relative w-full z-10 rounded-lg transition-all group-hover:-translate-x-3" src={f2.src} alt="Second Painting">
+      <div class="absolute left-0 top-0 w-full h-full bg-black group-hover:-translate-x-4"  ></div>
+    </div>
+    <div class="relative group">
+      <img class="relative w-full z-10 rounded-lg transition-all group-hover:-translate-x-3" src={f3.src} alt="Third Painting">
+      <div class="absolute left-0 top-0 w-full h-full bg-black group-hover:-translate-x-4"  ></div>
+    </div>
+    <div class="relative group">
+      <img class="relative w-full z-10 rounded-lg transition-all group-hover:-translate-x-3" src={f4.src} alt="Fourth Painting">
+      <div class="absolute left-0 top-0 w-full h-full bg-black group-hover:-translate-x-4"  ></div>
+    </div>
+  </div>
+</div>

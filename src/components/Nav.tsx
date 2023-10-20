@@ -39,7 +39,7 @@ export default function Nav(){
         <path d="M2 2L428 2" stroke="#282828" strokeWidth={2} strokeLinecap="round"/>
       </svg>
       <div>
-        <img src="../../public/stark1024.jpg" alt="Profile picture of me" width={96} height="auto" className="rounded-full"/>
+        <img src={stark1024.src} alt="Profile picture of me" width={96} height="auto" className="rounded-full"/>
       </div>
 
       {/* Title */}
@@ -72,7 +72,7 @@ export default function Nav(){
       {/* Fixed nav*/}
 
       {toggled && !matches && (
-        <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 25 }} className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center">
+        <motion.div animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 25 }} className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center z-20">
           <motion.div variants={navMotion} animate="visible" initial="hidden" className="flex flex-col gap-24 text-lg">
           <motion.a variants={itemMotion} href="/">Home</motion.a>
           <motion.a variants={itemMotion} href="/services">Services</motion.a>
